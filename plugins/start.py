@@ -82,11 +82,11 @@ async def start_command(client: Bot, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except BaseException:
                 return
-        temp_msg = await message.reply("<code>Tunggu Sebentar...</code>")
+        temp_msg = await message.reply("<code>Wait a minute...</code>")
         try:
             messages = await get_messages(client, ids)
         except BaseException:
-            await message.reply_text("<b>Telah Terjadi Error </b>🥺")
+            await message.reply_text("<b>An error has occurred </b>🥺")
             return
         await temp_msg.delete()
 
@@ -125,8 +125,8 @@ async def start_command(client: Bot, message: Message):
     else:
         buttons = [
                 [
-                    InlineKeyboardButton("Cara Penggunaan", callback_data = "help"),
-                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data = "close")
+                    InlineKeyboardButton("Method of use", callback_data = "help"),
+                    InlineKeyboardButton("✘ ᴄʟᴏsᴇ", callback_data = "close")
                 ]
             ]
         await message.reply_text(
@@ -153,19 +153,19 @@ async def start_command(client: Bot, message: Message):
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton("•ᴄʜᴀɴᴇʟ•", url=client.invitelink1), 
-            InlineKeyboardButton("•ᴄʜᴀɴᴇʟ•", url=client.invitelink2),
+            InlineKeyboardButton("✨ᴄʜᴀɴᴇʟ✨", url=client.invitelink1), 
+            InlineKeyboardButton("✨ᴄʜᴀɴᴇʟ✨", url=client.invitelink2),
         ],
         [
-            InlineKeyboardButton("•ᴄʜᴀɴᴇʟ•", url=client.invitelink3), 
-            InlineKeyboardButton("•ᴄʜᴀɴᴇʟ•", url=client.invitelink4),
+            InlineKeyboardButton("✨ᴄʜᴀɴᴇʟ✨", url=client.invitelink3), 
+            InlineKeyboardButton("✨ᴄʜᴀɴᴇʟ✨", url=client.invitelink4),
         ],
     ]
     try:
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text="•ᴄᴏʙᴀ ʟᴀɢɪ•",
+                    text="⭐️Kʏᴀ Hᴜᴇ⭐️",
                     url=f"https://t.me/{client.username}?start={message.command[1]}",
                 )
             ]
@@ -195,7 +195,7 @@ async def get_users(client: Bot, message: Message):
         chat_id=message.chat.id, text="<code>Processing ...</code>"
     )
     users = await full_userbase()
-    await msg.edit(f"{len(users)} <b>Pengguna menggunakan bot ini</b>")
+    await msg.edit(f"{len(users)} <b>Users use this bot</b>")
 
 
 @Bot.on_message(filters.private & filters.command("broadcast") & filters.user(ADMINS))
@@ -210,7 +210,7 @@ async def send_text(client: Bot, message: Message):
         unsuccessful = 0
 
         pls_wait = await message.reply(
-            "<code>Broadcasting Message Tunggu Sebentar...</code>"
+            "<code>Broadcasting Message Wait a Moment...</code>"
         )
         for row in query:
             chat_id = int(row[0])
@@ -229,18 +229,18 @@ async def send_text(client: Bot, message: Message):
                 unsuccessful += 1
             total += 1
 
-        status = f"""<b><u>Berhasil Broadcast</u>
-Jumlah Pengguna: <code>{total}</code>
-Berhasil: <code>{successful}</code>
-Gagal: <code>{unsuccessful}</code>
-Pengguna diblokir: <code>{blocked}</code>
-Akun Terhapus: <code>{deleted}</code></b>"""
+        status = f"""<b><u>✔️ Successful Broadcast</u>
+☞ Number of Users: <code>{total}</code>
+☞ Succeed: <code>{successful}</code>
+☞ Fail: <code>{unsuccessful}</code>
+☞ User blocked: <code>{blocked}</code>
+☞ Deleted Account: <code>{deleted}</code></b>"""
 
         return await pls_wait.edit(status)
 
     else:
         msg = await message.reply(
-            "<code>Gunakan Perintah ini Harus Sambil Reply ke pesan telegram yang ingin di Broadcast.</code>"
+            "<code>Use this command while responding to the telegram message you want to broadcast.</code>"
         )
         await asyncio.sleep(8)
         await msg.delete()
@@ -255,9 +255,9 @@ async def ping_pong(client, m: Message):
     m_reply = await m.reply_text("Pinging...")
     delta_ping = time() - start
     await m_reply.edit_text(
-        "<b>PONG!!</b>🏓 \n"
-        f"<b>• Pinger -</b> <code>{delta_ping * 1000:.3f}ms</code>\n"
-        f"<b>• Uptime -</b> <code>{uptime}</code>\n"
+        "<b>❈ PONG!!</b>🏓 \n"
+        f"<b>❈ Pinger -</b> <code>{delta_ping * 1000:.3f}ms</code>\n"
+        f"<b>❈ Uptime -</b> <code>{uptime}</code>\n"
     )
 
 
@@ -268,6 +268,6 @@ async def get_uptime(client, m: Message):
     uptime = await _human_time_duration(int(uptime_sec))
     await m.reply_text(
         "🤖 <b>Bot Status:</b>\n"
-        f"• <b>Uptime:</b> <code>{uptime}</code>\n"
-        f"• <b>Start Time:</b> <code>{START_TIME_ISO}</code>"
+        f"❈ <b>Uptime:</b> <code>{uptime}</code>\n"
+        f"❈ <b>Start Time:</b> <code>{START_TIME_ISO}</code>"
     )
