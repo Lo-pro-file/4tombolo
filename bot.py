@@ -46,13 +46,13 @@ class Bot(Client):
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning(
-                    "Bot tidak dapat Mengambil link Undangan dari FORCE_SUB_CHANNEL1!"
+                    "Bot cannot retrieve invitation link FORCE_SUB_CHANNEL1!"
                 )
                 self.LOGGER(__name__).warning(
-                    f"Silakan periksa kembali var FORCE_SUB_CHANNEL1 dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_CHANNEL1}"
+                    f"Please check back var FORCE_SUB_CHANNEL1 and make sure your bot is an admin on a channel with link permission to invite users via the invitation link, Current Channel Subs: {FORCE_SUB_CHANNEL1}"
                 )
                 self.LOGGER(__name__).info(
-                    "\nBot Berhenti. Gabung Group https://t.me/ReaSupport untuk Bantuan"
+                    "\nBot Stopped. Join Group https://t.me/WD_Topic_Group for Help"
                 )
                 sys.exit()
         if FORCE_SUB_CHANNEL2:
@@ -62,13 +62,13 @@ class Bot(Client):
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning(
-                    "Bot tidak dapat Mengambil link Undangan dari FORCE_SUB_CHANNEL2!"
+                    "Bots cannot Retrieve Invite links from FORCE_SUB_CHANNEL2!"
                 )
                 self.LOGGER(__name__).warning(
-                    f"Silakan periksa kembali var FORCE_SUB_CHANNEL2 dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Group Saat Ini: {FORCE_SUB_CHANNEL2}"
+                    f"Please double check the var FORCE_SUB_CHANNEL2 and make sure your bot is an admin on the channel with link permission to invite users via the invitation link, Current Group Subs: {FORCE_SUB_CHANNEL2}"
                 )
                 self.LOGGER(__name__).info(
-                    "\nBot Berhenti. Gabung Group https://t.me/ReaSupport untuk Bantuan"
+                    "\nBot Stopped. Join Group https://t.me/WD_Topic_Group for Help"
                 )
                 sys.exit()
         if FORCE_SUB_CHANNEL3:
@@ -78,10 +78,10 @@ class Bot(Client):
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning(
-                    "Bot tidak dapat Mengambil link Undangan dari FORCE_SUB_CHANNEL3!"
+                    "Bots cannot Retrieve Invite links from FORCE_SUB_CHANNEL3!"
                 )
                 self.LOGGER(__name__).warning(
-                    f"Silakan periksa kembali var FORCE_SUB_CHANNEL3 dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_CHANNEL3}"
+                    f"Please double check the var FORCE_SUB_CHANNEL3 and make sure your bot is an admin on a channel with link permission to invite users via the invitation link, Current Channel Subs: {FORCE_SUB_CHANNEL3}"
                 )
                 sys.exit()
         if FORCE_SUB_CHANNEL4:
@@ -91,13 +91,13 @@ class Bot(Client):
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning(
-                    "Bot tidak dapat Mengambil link Undangan dari FORCE_SUB_CHANNEL4!"
+                    "Bots cannot Retrieve Invite links from FORCE_SUB_CHANNEL4!"
                 )
                 self.LOGGER(__name__).warning(
-                    f"Silakan periksa kembali var FORCE_SUB_GROUP dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Group Saat Ini: {FORCE_SUB_CHANNEL2}"
+                    f"Please double check the var FORCE_SUB_GROUP and make sure your bot is an admin on the channel with link permission to invite users via the invitation link, Current Group Subs: {FORCE_SUB_CHANNEL2}"
                 )
                 self.LOGGER(__name__).info(
-                    "\nBot Berhenti. Gabung Group https://t.me/ReaSupport untuk Bantuan"
+                    "\nBot Stopped. Join Group https://t.me/WD_Topic_Group for Help"
                 )
                 sys.exit()
         try:
@@ -108,16 +108,16 @@ class Bot(Client):
         except Exception as e:
             self.LOGGER(__name__).warning(e)
             self.LOGGER(__name__).warning(
-                f"Pastikan Bot adalah Admin di Channel DataBase, dan Periksa kembali Nilai CHANNEL_ID, Nilai Saat Ini: {CHANNEL_ID}"
+                f"Make sure the Bot is an Admin on the DataBase Channel, and Double Check the Value CHANNEL_ID, Current Value: {CHANNEL_ID}"
             )
             self.LOGGER(__name__).info(
-                "\nBot Berhenti. Gabung Group https://t.me/ReaSupport untuk Bantuan"
+                "\nBot Stopped. Join Group https://t.me/WD_Topic_Group for Help"
             )
             sys.exit()
 
         self.set_parse_mode("html")
         self.LOGGER(__name__).info(
-            f"[🔥 BERHASIL DIAKTIFKAN! 🔥]\n\nBOT Dibuat oleh @{OWNER}\nJika @{OWNER} Membutuhkan Bantuan, Silahkan Tanyakan ke https://t.me/SayaKyu"
+            f"[⚡️ SUCCESSFULLY ACTIVATED! ⚡️]\n\nBOT Made by @{OWNER}\nif @{OWNER} Need Help, Please Ask https://t.me/WD_Contact_Bot"
         )
         self.username = usr_bot_me.username
 
