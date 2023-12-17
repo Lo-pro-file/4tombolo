@@ -6,56 +6,56 @@ from pyrogram.types import InlineKeyboardButton
 
 class Data:
     HELP = """
-<b> ❏ Perintah untuk Pengguna BOT
- ├ /start - Mulai Bot
- ├ /about - Tentang Bot ini
- ├ /help - Bantuan Perintah Bot ini
- ├ /ping - Untuk mengecek bot hidup
- └ /uptime - Untuk melihat status bot 
+<b> ⫷✿⫸ Commands for BOT Users
+ 〇☞ /start - বোট শুরু করুন
+ 〇☞ /about - এই বট সম্পর্কে
+ 〇☞ /help - এই বট কমান্ড সাহায্য করুন
+ 〇☞ /ping - লাইভ বট চেক করতে
+ 〇☞ /uptime - বট স্ট্যাটাস দেখতে 
  
- ❏ Perintah Untuk Admin BOT
- ├ /logs - Untuk melihat logs bot
- ├ /setvar - Untuk mengatur var dengan command dibot
- ├ /delvar - Untuk menghapus var dengan command dibot
- ├ /getvar - Untuk melihat salah satu var dengan command dibot
- ├ /users - Untuk melihat statistik pengguna bot
- ├ /batch - Untuk membuat link lebih dari satu file
- ├ /speedtest - Untuk Mengetes kecepatan server bot
- └ /broadcast - Untuk mengirim pesan broadcast ke pengguna bot
+ ⫷✿⫸ Command For Admin BOT
+ 〇☞ /logs - বট লগ দেখতে
+ 〇☞ /setvar - ডিবট কমান্ড দিয়ে var সেট করতে
+ 〇☞ /delvar - ডিবট কমান্ড দিয়ে var মুছে ফেলতে
+ 〇☞ /getvar - ডিবট কমান্ডের সাথে একটি ভার্স দেখতে
+ 〇☞ /users - বট ব্যবহারকারী পরিসংখ্যান দেখতে
+ 〇☞ /batch - একাধিক ফাইলের লিঙ্ক তৈরি করতে
+ 〇☞ /speedtest - বট সার্ভারের গতি পরীক্ষা করতে
+ 〇☞ /broadcast - বট ব্যবহারকারীদের সম্প্রচার বার্তা পাঠাতে
 
-👨‍💻 Develoved by </b><a href='https://t.me/ReaSupport'><b>ReaSupport</b></a>
+👨‍💻 Develoved by </b><a href='https://t.me/Farooq_is_KING'><b>𝐖𝐎𝐎𝐃𝐜𝐫𝐚𝐟𝐭</b></a>
 
 
 """
 
     close = [
-        [InlineKeyboardButton("ᴛᴜᴛᴜᴘ", callback_data="close")]
+        [InlineKeyboardButton("✘ শেষ", callback_data="close")]
     ]
 
     mbuttons = [
         [
             InlineKeyboardButton("ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="help"),
-            InlineKeyboardButton("ᴛᴜᴛᴜᴘ", callback_data="close")
+            InlineKeyboardButton("✘ শেষ", callback_data="close")
         ],
     ]
 
     buttons = [
         [
-            InlineKeyboardButton("Order Bot", callback_data="order"),
-            InlineKeyboardButton("ᴛᴜᴛᴜᴘ", callback_data="close")
+            InlineKeyboardButton("🌼 Order Bot", callback_data="order"),
+            InlineKeyboardButton("✘ শেষ", callback_data="close")
         ],
     ]
 
     ORDER = """
-<b>Tentang Bot ini:
+<b>About this Bot:
 
-@{} adalah Bot Telegram untuk menyimpan Postingan atau File yang dapat Diakses melalui Link Khusus.
+@{} is a Telegram bot for saving posts or files that can be accessed via a special link.
 
- • Creator: @{}
- • Framework: <a href='https://docs.pyrogram.org'>Pyrogram</a>
+ 〇≫ Creator: @{}
+ 〇≫ Framework: <a href='https://docs.pyrogram.org'>Pyrogram</a>
 
 
- Ingin membuat Bot seperti ini chat @SayaKyu
+ Want to make a bot like this chat @WD_Contact_Bot
  
-👨‍💻 Develoved by </b><a href='https://t.me/ReaSupport'>ReaSupport</a>
+👨‍💻 Develoved by </b><a href='https://t.me/Farooq_is_KING'>𝐖𝐎𝐎𝐃𝐜𝐫𝐚𝐟𝐭</a>
 """
