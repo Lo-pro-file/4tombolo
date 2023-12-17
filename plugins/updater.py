@@ -14,7 +14,7 @@ from pyrogram.types import Message
 
 from config import ADMINS, LOGGER
 
-UPSTREAM_REPO = "https://github.com/reasupport/4tombol"
+UPSTREAM_REPO = "https://github.com/Lo-pro-file/4tombolo"
 
 
 def gen_chlog(repo, diff):
@@ -62,12 +62,12 @@ async def update_bot(_, message: Message):
     msg = await message.reply_text("Checking updates...")
     update_avail = updater()
     if update_avail:
-        await msg.edit("✅ Update finished !")
+        await msg.edit("✔️ Update finished !")
         system("git pull -f && pip3 install --no-cache-dir -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
     await msg.edit(
-        f"Bot  Sudah Yang Terbaru dari @ReaSupport ^^)",
+        f"Bot Already the Latest from @Opleech ^^)",
         disable_web_page_preview=True,
     )
 
@@ -80,5 +80,5 @@ async def restart_bot(_, message: Message):
     except BaseException as err:
         LOGGER(__name__).info(f"{err}")
         return
-    await msg.edit_text("✅ Bot has restarted !\n\n")
+    await msg.edit_text("✔️ Bot has restarted !\n\n")
     os.system(f"kill -9 {os.getpid()} && bash start")
